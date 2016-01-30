@@ -41,6 +41,8 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="Hexo, NexT" />
+
 
 
 
@@ -55,16 +57,16 @@
 
 
 
-<meta name="description" content="A Lazy Boy">
+<meta name="description" content="死宅">
 <meta property="og:type" content="website">
 <meta property="og:title" content="标签">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
-<meta property="og:site_name" content="ACMer">
-<meta property="og:description" content="A Lazy Boy">
+<meta property="og:site_name" content="杂忆">
+<meta property="og:description" content="死宅">
 <meta property="og:updated_time" content="2016-01-30T11:21:52.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标签">
-<meta name="twitter:description" content="A Lazy Boy">
+<meta name="twitter:description" content="死宅">
 
 
 
@@ -86,7 +88,7 @@
   
 
   
-    标签 | ACMer
+    标签 | 杂忆
   
 </title>
 </head>
@@ -117,7 +119,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">ACMer</span>
+      <span class="site-title">杂忆</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -149,22 +151,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
               <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
             
             分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
           </a>
         </li>
       
@@ -215,15 +217,10 @@
             目前共计 1 个标签
         </div>
         <div class="tag-cloud-tags">
-          <a href="/tags/建站/" style="font-size: 12px; color: #ccc">建站</a>
+          <a href="/tags/MarkDown/" style="font-size: 12px; color: #ccc">MarkDown</a>
         </div>
       </div>
     
-
-  <div class="comments" id="comments">
-    
-  </div>
-
   </div>
 
 
@@ -233,6 +230,10 @@
 
           
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="tags/index.html"
+           data-title="标签" data-url="http://yoursite.com/tags/index.html">
+      </div>
     
   </div>
 
@@ -260,9 +261,9 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://cl.ly/41253t0y1T0e/xmy.jpg"
-               alt="xionglinlin" />
-          <p class="site-author-name" itemprop="name">xionglinlin</p>
-          <p class="site-description motion-element" itemprop="description">A Lazy Boy</p>
+               alt="熊林林" />
+          <p class="site-author-name" itemprop="name">熊林林</p>
+          <p class="site-description motion-element" itemprop="description">死宅</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -271,20 +272,24 @@
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
-
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分类</span>
+          
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
               </a>
-          </div>
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -322,7 +327,7 @@
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">xionglinlin</span>
+  <span class="author" itemprop="copyrightHolder">熊林林</span>
 </div>
 
 <div class="powered-by">
@@ -337,11 +342,7 @@
 </div>
 
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-<span id="busuanzi_container_site_uv">
-  ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>�˴�
-</span>
+
       </div>
     </footer>
 
@@ -391,9 +392,28 @@
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xionglinlin"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+  
+
+
 
 
 
