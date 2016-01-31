@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="C++, ACM" />
 
 
 
@@ -57,15 +57,15 @@
 
 
 
-<meta name="description" content="死宅">
+<meta name="description" content="自古求真皆寂寞，惟挑心灯伴夜霭。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="杂忆">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://Akemi-Homura.github.io/index.html">
 <meta property="og:site_name" content="杂忆">
-<meta property="og:description" content="死宅">
+<meta property="og:description" content="自古求真皆寂寞，惟挑心灯伴夜霭。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="杂忆">
-<meta name="twitter:description" content="死宅">
+<meta name="twitter:description" content="自古求真皆寂寞，惟挑心灯伴夜霭。">
 
 
 
@@ -73,7 +73,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -146,22 +146,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
               <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -246,7 +246,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-31T00:00:24+08:00" content="2016-01-31">
+            <time itemprop="dateCreated" datetime="2016-01-31T23:45:47+08:00" content="2016-01-31">
               2016-01-31
             </time>
           </span>
@@ -260,7 +260,19 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MarkDown/" itemprop="url" rel="index">
+                  <a href="/categories/建站/" itemprop="url" rel="index">
+                    <span itemprop="name">建站</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/建站/MarkDown/" itemprop="url" rel="index">
                     <span itemprop="name">MarkDown</span>
                   </a>
                 </span>
@@ -299,126 +311,12 @@
 
       
         
-          
-            <h2 id="MarkDown_u7B80_u4ECB"><a href="#MarkDown_u7B80_u4ECB" class="headerlink" title="MarkDown简介"></a>MarkDown简介</h2><p>MarkDown是一款轻量级的文本标记语言，与html相似，用标记符号来控制格式。并且可以转换为PDF，html，md等格式</p>
-<h2 id="u5E38_u7528_u7F16_u8F91_u8F6F_u4EF6"><a href="#u5E38_u7528_u7F16_u8F91_u8F6F_u4EF6" class="headerlink" title="常用编辑软件"></a>常用编辑软件</h2><ul>
-<li>本地编辑器：<a href="http://pad.haroopress.com/user.html" target="_blank" rel="external">Haroopad</a>,非常小众的一款Markdown编辑器，左边编辑右边实时预览效果，非常轻便；</li>
-<li>在线编辑器：<a href="http://mahua.jser.me/" target="_blank" rel="external">MaHua</a>,也是比较小众的一款Markdown编辑器，但效果确实很棒，我的这篇博文就是用MaHua写的。</li>
-</ul>
-<h2 id="MarkDown_u57FA_u672C_u8BED_u6CD5"><a href="#MarkDown_u57FA_u672C_u8BED_u6CD5" class="headerlink" title="MarkDown基本语法"></a>MarkDown基本语法</h2><p>参考<a href="http://www.jianshu.com/p/1e402922ee32/#" target="_blank" rel="external">MarkDown–基本语法</a>。</p>
-<h4 id="u6807_u9898"><a href="#u6807_u9898" class="headerlink" title="标题"></a>标题</h4><p><img src="http://cl.ly/1M0P2h202f1s/download/1.jpg" alt="标题"></p>
-<h4 id="u5217_u8868"><a href="#u5217_u8868" class="headerlink" title="列表"></a>列表</h4><p><img src="http://cl.ly/0X103m0y193b/download/6aee7dbbgw1effew5aftij20d80bz3yw.jpg" alt="列表"><br>注意<code>*</code>和<code>.</code>后面的空格。</p>
-<h4 id="u4EE3_u7801_u6846"><a href="#u4EE3_u7801_u6846" class="headerlink" title="代码框"></a>代码框</h4><p>在代码前后加上就行了，例如：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"Hello world"</span>&lt;&lt;endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="u5206_u5272_u7EBF"><a href="#u5206_u5272_u7EBF" class="headerlink" title="分割线"></a>分割线</h4><p>分割线是3个*号。例如：</p>
-<hr>
-<h4 id="u56FE_u7247_u548C_u94FE_u63A5"><a href="#u56FE_u7247_u548C_u94FE_u63A5" class="headerlink" title="图片和链接"></a>图片和链接</h4><p>链接 <code>[]()</code><br>图片 <code>![]()</code><br>可以用<a href="http://www.getcloudapp.com/" target="_blank" rel="external">CloudApp</a>来获得图片的url。</p>
-<h4 id="u7C97_u4F53_u548C_u659C_u4F53"><a href="#u7C97_u4F53_u548C_u659C_u4F53" class="headerlink" title="粗体和斜体"></a>粗体和斜体</h4><p>用两个<code>*</code>把字体包裹起来则是粗体，只用一个<code>*</code>就是斜体。</p>
-<h4 id="u5F15_u7528"><a href="#u5F15_u7528" class="headerlink" title="引用"></a>引用</h4><p>在文本前加入<code>&gt;</code>就行了</p>
-<blockquote>
-<p>这是一个引用<br><img src="http://cl.ly/3D0i2U2v2H1w/download/6aee7dbbgw1effezhonxlj20e009c3yu.jpg" alt="引用的使用方法"></p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/30/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-30T17:55:55+08:00" content="2016-01-30">
-              2016-01-30
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/30/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/30/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &#34;My New Post&#34;</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <p>如何使用MarkDown编辑文章。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/01/31/MarkDown入门简介/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -562,14 +460,14 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://cl.ly/41253t0y1T0e/xmy.jpg"
-               alt="熊林林" />
-          <p class="site-author-name" itemprop="name">熊林林</p>
-          <p class="site-description motion-element" itemprop="description">死宅</p>
+               alt="Ulysses" />
+          <p class="site-author-name" itemprop="name">Ulysses</p>
+          <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，惟挑心灯伴夜霭。</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -577,7 +475,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -586,7 +484,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -598,12 +496,33 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Akemi-Homura" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Github
+                  
+                </a>
+              </span>
+            
+          
         </div>
 
         
         
 
         <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.cnblogs.com/xionglinlin/" target="_blank">我的CSDN博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/xiong-lin-lin-21" target="_blank">我的zhuhu</a>
+              </span>
+            
           
         </div>
 
@@ -628,7 +547,7 @@
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">熊林林</span>
+  <span class="author" itemprop="copyrightHolder">Ulysses</span>
 </div>
 
 <div class="powered-by">
