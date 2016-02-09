@@ -1,0 +1,702 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="自古求真皆寂寞，惟挑心灯伴夜霭。" />
+
+
+
+  <meta name="keywords" content="ACM,WT," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="Winter Training 13部分题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Winter Training 13">
+<meta property="og:url" content="http://Akemi-Homura.github.io/2016/02/09/winter training 13/index.html">
+<meta property="og:site_name" content="James Joyce">
+<meta property="og:description" content="Winter Training 13部分题解">
+<meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/%E6%95%B0%E5%AD%A6l4b3qt.png">
+<meta property="og:updated_time" content="2016-02-09T09:00:34.469Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Winter Training 13">
+<meta name="twitter:description" content="Winter Training 13部分题解">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always'
+  };
+</script>
+
+  <title> Winter Training 13 | James Joyce </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">James Joyce</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            <i class="menu-item-icon icon-next-guestbook"></i> <br />
+            留言
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Winter Training 13
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2016-02-09T17:00:34+08:00" content="2016-02-09">
+            2016-02-09
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/ACM/" itemprop="url" rel="index">
+                  <span itemprop="name">ACM</span>
+                </a>
+              </span>
+
+              
+              
+                ， 
+              
+
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/ACM/WT/" itemprop="url" rel="index">
+                  <span itemprop="name">WT</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/02/09/winter training 13/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/09/winter training 13/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><strong>Winter Training 13部分题解</strong><br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/%E6%95%B0%E5%AD%A6l4b3qt.png" alt="math"><br><a id="more"></a></p>
+<h1 id="A_u9898"><a href="#A_u9898" class="headerlink" title="A题"></a>A题</h1><hr>
+<h4 id="u9898_u76EE_u5927_u610F"><a href="#u9898_u76EE_u5927_u610F" class="headerlink" title="题目大意"></a>题目大意</h4><p>有n个账户依次加进服务器，服务器的缓存器的大小为m，每加进来一个账户（如果它没有出现在缓存器中），就把最早加进来的账户删除。输出最后缓存器里的账户有哪些（从最晚到最早）</p>
+<h4 id="u7B97_u6CD5"><a href="#u7B97_u6CD5" class="headerlink" title="算法"></a>算法</h4><p>先把所有的账户存进来，然后从后向前扫，如果没有出现过就输出，直到输出了m个。</p>
+<h4 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">100100</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,sum=<span class="number">0</span>,m,i;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;tag;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">	<span class="keyword">for</span>(i=n;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(tag.find(a[i])!=tag.end())<span class="keyword">continue</span>;</span><br><span class="line">		tag[a[i]]=<span class="number">1</span>;</span><br><span class="line">		++sum;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;a[i]&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">if</span>(sum==m)<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="K_u9898"><a href="#K_u9898" class="headerlink" title="K题"></a>K题</h1><hr>
+<h4 id="u9898_u76EE_u5927_u610F-1"><a href="#u9898_u76EE_u5927_u610F-1" class="headerlink" title="题目大意"></a>题目大意</h4><p>二维平面上有一个$W×H$（$1≤W,H≤10^{9}）$的矩形，矩形的范围是$（0，0）$到$（W，H）$，矩形里面有n个海盗据点，有一艘船从$y=0$任意一点进入，从$y=H$任意一点出去，要求设计一条最佳的路线，使路线上离海盗据点的距离的最小值尽可能大。</p>
+<h4 id="u7B97_u6CD5-1"><a href="#u7B97_u6CD5-1" class="headerlink" title="算法"></a>算法</h4><p><font color="red"><strong>二分答案。</strong></font>二分路线上的最小距离（$L=0，R=10^{9}$)(这里$R$大了会TLE)。然后以每个点为圆心以最小距离为半径画圆，如果两个圆（$i,j$）相交，则在$(i,j)$间连一条边，<strong>这里要多加两个点，左边界$(n+1)$和右边界$(n+2)$</strong>。然后以左边界$(n+1)$为起点,BFS或DFS一次，看能否到达右边界$(n+2)$。</p>
+<blockquote>
+<p>解释一下这样做的原理，二分最小距离并画圆应该很好理解，要注意能通过是能从$y=0$到$y=H$，所以要看路是否被这些圆<strong>封锁</strong>了。$(i,j)$间连边的含义就是$(i,j)$间被<strong>封锁</strong>了，无法通过。</p>
+</blockquote>
+<h4 id="u4EE3_u7801-1"><a href="#u4EE3_u7801-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rep(i,n) for(i=<span class="number">1</span>;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxm=<span class="number">250100</span>;</span><br><span class="line"><span class="keyword">struct</span> Point</span><br><span class="line">&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">double</span> a,<span class="keyword">double</span> b)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		x=a,y=b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">double</span> x,y;</span><br><span class="line">&#125;;</span><br><span class="line">Point d[<span class="number">520</span>];</span><br><span class="line"><span class="keyword">int</span> fir[<span class="number">520</span>],Next[maxm],End[maxm],size;</span><br><span class="line"><span class="keyword">bool</span> tag[<span class="number">520</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	Next[++size]=fir[x];</span><br><span class="line">	fir[x]=size;</span><br><span class="line">	End[size]=y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">GetDis</span><span class="params">(Point a,Point b)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> S,<span class="keyword">int</span> T)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt;que;</span><br><span class="line">	<span class="keyword">while</span>(!que.empty())que.pop();</span><br><span class="line">	<span class="built_in">memset</span>(tag,<span class="literal">false</span>,<span class="keyword">sizeof</span>(tag));</span><br><span class="line">	que.push(S);</span><br><span class="line">	tag[S]=<span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">while</span>(!que.empty())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> now=que.front();</span><br><span class="line">		que.pop();</span><br><span class="line">		<span class="keyword">if</span>(now==T)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> u=fir[now];u;u=Next[u])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> ed=End[u];</span><br><span class="line">			<span class="keyword">if</span>(!tag[ed])</span><br><span class="line">			&#123;</span><br><span class="line">				tag[ed]=<span class="literal">true</span>;</span><br><span class="line">				que.push(ed);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> w,h,R=<span class="number">0.0</span>;</span><br><span class="line">	<span class="keyword">int</span> n,i;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;w&gt;&gt;h&gt;&gt;n;</span><br><span class="line">	rep(i,n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">double</span> x,y;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y;</span><br><span class="line">		d[i].insert(x,y);</span><br><span class="line">		R=max(&#123;R,x,y&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">double</span> L=<span class="number">0.0</span>,ans;</span><br><span class="line">	R+=<span class="number">1.0</span>;</span><br><span class="line">	rep(i,<span class="number">100</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">double</span> mid=(L+R)/<span class="number">2.0</span>;</span><br><span class="line">	<span class="comment">//	printf("mid=%.12f\n",mid);</span></span><br><span class="line">		size=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">memset</span>(fir,<span class="number">0</span>,<span class="keyword">sizeof</span>(fir));</span><br><span class="line">		<span class="keyword">int</span> j,k;</span><br><span class="line">		rep(j,n)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(mid&gt;d[j].x)</span><br><span class="line">			&#123;</span><br><span class="line">				addedge(j,n+<span class="number">1</span>);</span><br><span class="line">				addedge(n+<span class="number">1</span>,j);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(mid&gt;w-d[j].x)</span><br><span class="line">			&#123;</span><br><span class="line">				addedge(j,n+<span class="number">2</span>);</span><br><span class="line">				addedge(n+<span class="number">2</span>,j);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">double</span> temp=mid*mid*<span class="number">4.0</span>;</span><br><span class="line">			<span class="keyword">for</span>(k=j+<span class="number">1</span>;k&lt;=n;k++)</span><br><span class="line">				<span class="keyword">if</span>(temp&gt;GetDis(d[j],d[k]))</span><br><span class="line">				&#123;</span><br><span class="line">					addedge(j,k);</span><br><span class="line">					addedge(k,j);</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(bfs(n+<span class="number">1</span>,n+<span class="number">2</span>))R=mid;</span><br><span class="line">		<span class="keyword">else</span> L=mid;</span><br><span class="line">		ans=mid;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.12f\n"</span>,ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="I_u9898"><a href="#I_u9898" class="headerlink" title="I题"></a>I题</h1><hr>
+<h4 id="u9898_u76EE_u5927_u610F-2"><a href="#u9898_u76EE_u5927_u610F-2" class="headerlink" title="题目大意"></a>题目大意</h4><p>给你$n$个数，可以选择其中几个作加法，问最小的不能凑出来的数是多少。</p>
+<h4 id="u7B97_u6CD5-2"><a href="#u7B97_u6CD5-2" class="headerlink" title="算法"></a>算法</h4><p>把$n$个数从小到大排序，并作前缀和，如果$a<em>{i+1}＞s</em>{i}+1$，则答案是$s_{i}$。</p>
+<blockquote>
+<p>解释一下这样做的原理。假如把$n$个数从小到大排序，并作前缀和，如何判断$(s<em>{i},s</em>{i+1})$能否被凑出来？假设$[1,s_i]$的数都能凑出来（$s<em>1$肯定成立），那么$[a</em>{i+1},a<em>{i+1}+s</em>{i}=s<em>{i+1}]$都能凑出来，如果$a</em>{i+1}＞s<em>{i}+1$则$[s</em>{i}+1,a_{i+1}]$都凑不出来。</p>
+</blockquote>
+<h4 id="u4EE3_u7801-2"><a href="#u4EE3_u7801-2" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rep(i,n) for(i=<span class="number">1</span>;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</span><br><span class="line">ll a[<span class="number">10010</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,i;</span><br><span class="line">	ll sum=<span class="number">0L</span>L;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	rep(i,n)<span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">	sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>);</span><br><span class="line">	rep(i,n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(a[i]&gt;sum+<span class="number">1L</span>L)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;sum+<span class="number">1L</span>L&lt;&lt;endl;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		sum+=a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;sum+<span class="number">1L</span>L&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ACM/" rel="tag">#ACM</a>
+          
+            <a href="/tags/WT/" rel="tag">#WT</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/02/09/MarkDown入门简介/" rel="next">Markdown入门教程</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2016/02/09/winter training 13/"
+                   data-title="Winter Training 13" data-url="http://Akemi-Homura.github.io/2016/02/09/winter training 13/">
+              </div>
+            
+          </div>
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://7xqsr4.com1.z0.glb.clouddn.com/xmy.jpg" alt="Ulysses" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Ulysses</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">自古求真皆寂寞，惟挑心灯伴夜霭。</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Akemi-Homura" target="_blank">Github</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.cnblogs.com/xionglinlin/" target="_blank">我的CSDN博客</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.zhihu.com/people/xiong-lin-lin-21" target="_blank">我的zhuhu</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A_u9898"><span class="nav-number">1.</span> <span class="nav-text">A题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#K_u9898"><span class="nav-number">2.</span> <span class="nav-text">K题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F-1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5-1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801-1"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#I_u9898"><span class="nav-number">3.</span> <span class="nav-text">I题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F-2"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5-2"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801-2"><span class="nav-number">3.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ulysses</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xionglinlin"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>

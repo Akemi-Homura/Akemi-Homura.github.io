@@ -40,10 +40,11 @@
 <meta name="description" content="TC SRM 681 div2 部分题解。代码是TC格式，没有加main函数。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TC SRM 681 div2">
-<meta property="og:url" content="http://Akemi-Homura.github.io/2016/02/07/TC SRM 681 div2/index.html">
+<meta property="og:url" content="http://Akemi-Homura.github.io/2016/02/09/TC SRM 681 div2/index.html">
 <meta property="og:site_name" content="James Joyce">
 <meta property="og:description" content="TC SRM 681 div2 部分题解。代码是TC格式，没有加main函数。">
-<meta property="og:updated_time" content="2016-02-07T06:36:39.215Z">
+<meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/%E6%95%B0%E5%AD%A65dh4k_djdyJwvuvWIdL9v-6wL1zONODDKaoK3TOSLbrvBQAACQgAAEpQ.jpg">
+<meta property="og:updated_time" content="2016-02-09T08:08:17.968Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TC SRM 681 div2">
 <meta name="twitter:description" content="TC SRM 681 div2 部分题解。代码是TC格式，没有加main函数。">
@@ -180,8 +181,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-02-07T14:36:39+08:00" content="2016-02-07">
-            2016-02-07
+          <time itemprop="dateCreated" datetime="2016-02-09T16:08:17+08:00" content="2016-02-09">
+            2016-02-09
           </time>
         </span>
 
@@ -218,8 +219,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/02/07/TC SRM 681 div2/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/07/TC SRM 681 div2/" itemprop="commentsCount"></span>
+              <a href="/2016/02/09/TC SRM 681 div2/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/09/TC SRM 681 div2/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -233,7 +234,7 @@
       
 
       
-        <span itemprop="articleBody"><p>TC SRM 681 div2 部分题解。<font color="red"><strong>代码是TC格式，没有加main函数。</strong></font><br><a id="more"></a></p>
+        <span itemprop="articleBody"><p>TC SRM 681 div2 部分题解。<font color="red"><strong>代码是TC格式，没有加main函数。</strong></font><br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/%E6%95%B0%E5%AD%A65dh4k_djdyJwvuvWIdL9v-6wL1zONODDKaoK3TOSLbrvBQAACQgAAEpQ.jpg" alt="math"><br><a id="more"></a></p>
 <h2 id="A_u9898_3A_CoinFlipsDiv2"><a href="#A_u9898_3A_CoinFlipsDiv2" class="headerlink" title="A题: CoinFlipsDiv2"></a>A题: CoinFlipsDiv2</h2><hr>
 <h4 id="u9898_u76EE_u5927_u610F_3A"><a href="#u9898_u76EE_u5927_u610F_3A" class="headerlink" title="题目大意:"></a>题目大意:</h4><p>有n个硬币排成一行，每个硬币可能正面朝上也可能反面朝上，输出有几个硬币它相邻的硬币与它的朝向不同。</p>
 <h4 id="u4EE3_u7801_uFF1A"><a href="#u4EE3_u7801_uFF1A" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">class</span> CoinFlipsDiv2</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">countCoins</span><span class="params">(<span class="built_in">string</span> state)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> len=state.size();</span><br><span class="line">		<span class="keyword">int</span> i,ans=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">			<span class="keyword">if</span>(state[i]!=state[max(<span class="number">0</span>,i-<span class="number">1</span>)] || state[i]!=state[min(len-<span class="number">1</span>,i+<span class="number">1</span>)])</span><br><span class="line">				++ans;</span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -263,13 +264,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/09/AIM Tech Round(div 2)/" rel="prev">AIM Tech Round(div 2)</a>
+              <a href="/2016/02/09/MarkDown入门简介/" rel="prev">Markdown入门教程</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/31/MarkDown入门简介/" rel="next">Markdown入门教程</a>
+              <a href="/2016/02/09/Codeforces Round 342 (Div. 2) /" rel="next">Codeforces Round 342 (Div2)</a>
             
           </div>
         </div>
@@ -294,8 +295,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/02/07/TC SRM 681 div2/"
-                   data-title="TC SRM 681 div2" data-url="http://Akemi-Homura.github.io/2016/02/07/TC SRM 681 div2/">
+              <div class="ds-thread" data-thread-key="2016/02/09/TC SRM 681 div2/"
+                   data-title="TC SRM 681 div2" data-url="http://Akemi-Homura.github.io/2016/02/09/TC SRM 681 div2/">
               </div>
             
           </div>
@@ -335,21 +336,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
