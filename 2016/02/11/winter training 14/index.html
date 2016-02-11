@@ -45,7 +45,7 @@
 <meta property="og:description" content="Winter Training 14部分题解">
 <meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/tb.jpg">
 <meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/problem.jpg">
-<meta property="og:updated_time" content="2016-02-11T11:19:43.819Z">
+<meta property="og:updated_time" content="2016-02-11T11:22:12.913Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Winter Training 14">
 <meta name="twitter:description" content="Winter Training 14部分题解">
@@ -182,7 +182,7 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-02-11T19:19:43+08:00" content="2016-02-11">
+          <time itemprop="dateCreated" datetime="2016-02-11T19:22:12+08:00" content="2016-02-11">
             2016-02-11
           </time>
         </span>
@@ -270,8 +270,8 @@
 <p>把这两个值乘起来就能得到这个点的分数，要求计算能得到的最大分数。</p>
 <h4 id="u7B97_u6CD5-2"><a href="#u7B97_u6CD5-2" class="headerlink" title="算法"></a>算法</h4><p>通过分析可得，这些点整体上有一条主线，然后有一个点上有很多分支来使分数变大。归纳一下可得到如下公式：<br><font color="red">$ans=1×1+2×2+2×3+3×3+...(n-1)×n+n×n$</font></p>
 <blockquote>
-<p>据说可以用均值不等式来证明它。注意$n<3$要特判。< p="">
-</3$要特判。<></p></blockquote>
+<p>据说可以用均值不等式来证明它。注意特判。</p>
+</blockquote>
 <h4 id="u4EE3_u7801-3"><a href="#u4EE3_u7801-3" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rep(i,n) for(i=<span class="number">1</span>;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,sum=<span class="number">2</span>;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">if</span>(n&lt;<span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;n&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(n==<span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"5.000"</span>&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">double</span> ans=<span class="number">5.0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		++sum;</span><br><span class="line">		ans+=i*(i-<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">if</span>(sum==n)<span class="keyword">break</span>;</span><br><span class="line">		++sum;</span><br><span class="line">		ans+=i*i;</span><br><span class="line">		<span class="keyword">if</span>(sum==n)<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.12f\n"</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
       
     </div>
