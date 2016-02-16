@@ -40,12 +40,12 @@
 <meta name="description" content="Winter Training 14部分题解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Winter Training 14">
-<meta property="og:url" content="http://Akemi-Homura.github.io/2016/02/11/winter training 14/index.html">
+<meta property="og:url" content="http://Akemi-Homura.github.io/2016/02/16/winter training 14/index.html">
 <meta property="og:site_name" content="James Joyce">
 <meta property="og:description" content="Winter Training 14部分题解">
 <meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/tb.jpg">
 <meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/problem.jpg">
-<meta property="og:updated_time" content="2016-02-11T11:22:12.913Z">
+<meta property="og:updated_time" content="2016-02-16T09:45:44.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Winter Training 14">
 <meta name="twitter:description" content="Winter Training 14部分题解">
@@ -182,8 +182,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-02-11T19:22:12+08:00" content="2016-02-11">
-            2016-02-11
+          <time itemprop="dateCreated" datetime="2016-02-16T17:45:44+08:00" content="2016-02-16">
+            2016-02-16
           </time>
         </span>
 
@@ -220,8 +220,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/02/11/winter training 14/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/11/winter training 14/" itemprop="commentsCount"></span>
+              <a href="/2016/02/16/winter training 14/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/16/winter training 14/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -242,6 +242,9 @@
 <h1 id="C_u9898"><a href="#C_u9898" class="headerlink" title="C题"></a>C题</h1><hr>
 <h4 id="u9898_u76EE_u5927_u610F-1"><a href="#u9898_u76EE_u5927_u610F-1" class="headerlink" title="题目大意"></a>题目大意</h4><p>给一个$n^2×n^2$的方格，填入一些’#’，要求每一行，每一列，任意一个$n×n$的方格里都恰好有$k$个’#’。</p>
 <h4 id="u7B97_u6CD5"><a href="#u7B97_u6CD5" class="headerlink" title="算法"></a>算法</h4><p>先生成一个$n×n$的方格，在里面<strong>任意</strong>填入$k$个’#’，然后向右拓展$n-1$次，每次都将$n×n$的方格向右平移$n$个格子，然后每一行依次下移(第一行为原来的最后一行)。完成后再将这$n$个$n×n$的方格向下拓展$n$次，每次向下平移$n$个格子，然后将每列都右移（第一列为原来最后一列。<font color="red"><strong>算法的正确性，只要模拟一下即可知道</strong></font></p>
+<blockquote>
+<p>更具体的来说，用这种方法生成的$n^2×n^2$的方格，它的每一行都是$n\times n$的基本方格中所有行的’#’加起来。刚好就是$k$，列也是一样。因为只改变了位置，所以每个$n\times n$的方格里都是$k$个’#’.</p>
+</blockquote>
 <h4 id="u4EE3_u7801-1"><a href="#u4EE3_u7801-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rep(i,n) for(i=<span class="number">1</span>;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> mp[<span class="number">500</span>][<span class="number">500</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,k,i,j,sum=<span class="number">0</span>,l,r;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;k;</span><br><span class="line">	rep(i,n)</span><br><span class="line">	&#123;</span><br><span class="line">		rep(j,n)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(sum&lt;k)</span><br><span class="line">			&#123;</span><br><span class="line">				mp[i][j]=<span class="string">'*'</span>;</span><br><span class="line">				++sum;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> mp[i][j]=<span class="string">'.'</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	rep(i,n-<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		rep(j,n)</span><br><span class="line">			<span class="keyword">for</span>(l=i*n+<span class="number">1</span>;l&lt;=i*n+n;l++)</span><br><span class="line">			&#123;</span><br><span class="line">				mp[j][l]=mp[((j-<span class="number">1</span>)?(j-<span class="number">1</span>):n)][l-n];</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	rep(i,n-<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		rep(j,n)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span>(l=i*n+<span class="number">1</span>;l&lt;=i*n+n;l++)</span><br><span class="line">			&#123;</span><br><span class="line">				mp[l][(j-<span class="number">1</span>)*n+<span class="number">1</span>]=mp[l-n][j*n];</span><br><span class="line">				<span class="keyword">for</span>(r=(j-<span class="number">1</span>)*n+<span class="number">2</span>;r&lt;=(j-<span class="number">1</span>)*n+n;r++)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="comment">//printf("i=%d j=%d l=%d r=%d\n",i,j,r,l);</span></span><br><span class="line">					mp[l][r]=mp[l-n][r-<span class="number">1</span>];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	rep(i,n*n)</span><br><span class="line">	&#123;</span><br><span class="line">		rep(j,n*n)<span class="built_in">printf</span>(<span class="string">"%c"</span>,mp[i][j]);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="A_u9898"><a href="#A_u9898" class="headerlink" title="A题"></a>A题</h1><hr>
 <h4 id="u9898_u76EE_u5927_u610F-2"><a href="#u9898_u76EE_u5927_u610F-2" class="headerlink" title="题目大意"></a>题目大意</h4><p>有一座山，山下有$n$个点（围成一个圈）($1…n$)，山顶有一个点($0$)，任意两点间都有一条道路。<br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/problem.jpg" alt="map"></p>
@@ -270,7 +273,7 @@
 <p>把这两个值乘起来就能得到这个点的分数，要求计算能得到的最大分数。</p>
 <h4 id="u7B97_u6CD5-2"><a href="#u7B97_u6CD5-2" class="headerlink" title="算法"></a>算法</h4><p>通过分析可得，这些点整体上有一条主线，然后有一个点上有很多分支来使分数变大。归纳一下可得到如下公式：<br><font color="red">$ans=1×1+2×2+2×3+3×3+...(n-1)×n+n×n$</font></p>
 <blockquote>
-<p>据说可以用均值不等式来证明它。注意特判。</p>
+<p>可以用均值不等式来证明它。注意特判。<br>整体上有一条主线的时候可以保证两个点间的距离最大。假设第$i$个点得到的两个数为$a,b$.则$a+b$是一个定值，而每次加点都是$a$或$b$加$1$,根据均值不等式，$a和b$尽量靠近时乘积最大。</p>
 </blockquote>
 <h4 id="u4EE3_u7801-3"><a href="#u4EE3_u7801-3" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rep(i,n) for(i=<span class="number">1</span>;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,sum=<span class="number">2</span>;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="keyword">if</span>(n&lt;<span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;n&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(n==<span class="number">2</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"5.000"</span>&lt;&lt;endl;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">double</span> ans=<span class="number">5.0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		++sum;</span><br><span class="line">		ans+=i*(i-<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">if</span>(sum==n)<span class="keyword">break</span>;</span><br><span class="line">		++sum;</span><br><span class="line">		ans+=i*i;</span><br><span class="line">		<span class="keyword">if</span>(sum==n)<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.12f\n"</span>,ans);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
       
@@ -290,6 +293,8 @@
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/16/Educational Codeforces Round 7/" rel="prev">Educational Codeforces Round 7</a>
             
           </div>
 
@@ -320,8 +325,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/02/11/winter training 14/"
-                   data-title="Winter Training 14" data-url="http://Akemi-Homura.github.io/2016/02/11/winter training 14/">
+              <div class="ds-thread" data-thread-key="2016/02/16/winter training 14/"
+                   data-title="Winter Training 14" data-url="http://Akemi-Homura.github.io/2016/02/16/winter training 14/">
               </div>
             
           </div>
@@ -361,7 +366,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
