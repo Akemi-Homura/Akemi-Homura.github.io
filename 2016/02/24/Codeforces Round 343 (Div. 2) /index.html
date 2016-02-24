@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="ACM,TC," />
+  <meta name="keywords" content="ACM,CF," />
 
 
 
@@ -37,17 +37,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="TC SRM 681 div2 部分题解。代码是TC格式，没有加main函数。">
+<meta name="description" content="Codeforces Round #343 (Div. 2)部分题解。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TC SRM 681 div2">
-<meta property="og:url" content="http://Akemi-Homura.github.io/2016/02/09/TC SRM 681 div2/index.html">
+<meta property="og:title" content="Codeforces Round 343 (Div. 2)">
+<meta property="og:url" content="http://Akemi-Homura.github.io/2016/02/24/Codeforces Round 343 (Div. 2) /index.html">
 <meta property="og:site_name" content="James Joyce">
-<meta property="og:description" content="TC SRM 681 div2 部分题解。代码是TC格式，没有加main函数。">
-<meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/%E6%95%B0%E5%AD%A65dh4k_djdyJwvuvWIdL9v-6wL1zONODDKaoK3TOSLbrvBQAACQgAAEpQ.jpg">
-<meta property="og:updated_time" content="2016-02-09T08:08:17.968Z">
+<meta property="og:description" content="Codeforces Round #343 (Div. 2)部分题解。">
+<meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/%E5%B0%8F%E5%9C%86null50b1fb4a819264f6.jpg">
+<meta property="og:updated_time" content="2016-02-23T15:45:55.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TC SRM 681 div2">
-<meta name="twitter:description" content="TC SRM 681 div2 部分题解。代码是TC格式，没有加main函数。">
+<meta name="twitter:title" content="Codeforces Round 343 (Div. 2)">
+<meta name="twitter:description" content="Codeforces Round #343 (Div. 2)部分题解。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -57,7 +57,7 @@
   };
 </script>
 
-  <title> TC SRM 681 div2 | James Joyce </title>
+  <title> Codeforces Round 343 (Div. 2) | James Joyce </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,7 +172,7 @@
           
           
             
-              TC SRM 681 div2
+              Codeforces Round 343 (Div. 2)
             
           
         </h1>
@@ -181,8 +181,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-02-09T16:08:17+08:00" content="2016-02-09">
-            2016-02-09
+          <time itemprop="dateCreated" datetime="2016-02-24T12:48:54+08:00" content="2016-02-24">
+            2016-02-24
           </time>
         </span>
 
@@ -203,8 +203,8 @@
 
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/ACM/TC/" itemprop="url" rel="index">
-                  <span itemprop="name">TC</span>
+                <a href="/categories/ACM/CF/" itemprop="url" rel="index">
+                  <span itemprop="name">CF</span>
                 </a>
               </span>
 
@@ -219,8 +219,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/02/09/TC SRM 681 div2/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/09/TC SRM 681 div2/" itemprop="commentsCount"></span>
+              <a href="/2016/02/24/Codeforces Round 343 (Div. 2) /#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/Codeforces Round 343 (Div. 2) /" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -234,18 +234,52 @@
       
 
       
-        <span itemprop="articleBody"><p>TC SRM 681 div2 部分题解。<font color="red"><strong>代码是TC格式，没有加main函数。</strong></font><br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/%E6%95%B0%E5%AD%A65dh4k_djdyJwvuvWIdL9v-6wL1zONODDKaoK3TOSLbrvBQAACQgAAEpQ.jpg" alt="math"><br><a id="more"></a></p>
-<h2 id="A_u9898_3A_CoinFlipsDiv2"><a href="#A_u9898_3A_CoinFlipsDiv2" class="headerlink" title="A题: CoinFlipsDiv2"></a>A题: CoinFlipsDiv2</h2><hr>
-<h4 id="u9898_u76EE_u5927_u610F_3A"><a href="#u9898_u76EE_u5927_u610F_3A" class="headerlink" title="题目大意:"></a>题目大意:</h4><p>有n个硬币排成一行，每个硬币可能正面朝上也可能反面朝上，输出有几个硬币它相邻的硬币与它的朝向不同。</p>
-<h4 id="u4EE3_u7801_uFF1A"><a href="#u4EE3_u7801_uFF1A" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">class</span> CoinFlipsDiv2</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">countCoins</span><span class="params">(<span class="built_in">string</span> state)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> len=state.size();</span><br><span class="line">		<span class="keyword">int</span> i,ans=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">			<span class="keyword">if</span>(state[i]!=state[max(<span class="number">0</span>,i-<span class="number">1</span>)] || state[i]!=state[min(len-<span class="number">1</span>,i+<span class="number">1</span>)])</span><br><span class="line">				++ans;</span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="B_u9898_3AExplodingRobert"><a href="#B_u9898_3AExplodingRobert" class="headerlink" title="B题:ExplodingRobert"></a>B题:ExplodingRobert</h2><hr>
-<h4 id="u9898_u76EE_u5927_u610F_uFF1A"><a href="#u9898_u76EE_u5927_u610F_uFF1A" class="headerlink" title="题目大意："></a>题目大意：</h4><p>给出两个机器人在二维平面上的坐标，给出一系列相同的指令（向上、下、左、右走一步），每个机器人有可能忽略一些指令（可能忽略全部，也可能一个都不忽略），问两个机器人是否有可能在同一时间进入同一个格子。</p>
-<h4 id="u7B97_u6CD5_3A"><a href="#u7B97_u6CD5_3A" class="headerlink" title="算法:"></a>算法:</h4><p>使用DP的思想，对于每一秒，找出两个机器人所有可能在的位置（数据较小，可以实现），看是否有重合，有重合就Explod，可以用map和vector来实现（因为坐标可能有负数，这样比较节省空间）。</p>
-<h4 id="u4EE3_u7801_uFF1A-1"><a href="#u4EE3_u7801_uFF1A-1" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> fx[]=&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,-<span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> fy[]=&#123;<span class="number">1</span>,-<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">struct</span> Point</span><br><span class="line">&#123;</span><br><span class="line">	Point(<span class="keyword">int</span> a=<span class="number">0</span>,<span class="keyword">int</span> b=<span class="number">0</span>):x(a),y(b) &#123; &#125;</span><br><span class="line">	<span class="keyword">int</span> x,y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt;&gt;mp1,mp2,mp;</span><br><span class="line"><span class="keyword">class</span> ExplodingRobots</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">canExplode</span><span class="params">(<span class="keyword">int</span> x1, <span class="keyword">int</span> y1, <span class="keyword">int</span> x2, <span class="keyword">int</span> y2, <span class="built_in">string</span> instructions)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;Point&gt;s1,temp;</span><br><span class="line">		<span class="built_in">vector</span>&lt;Point&gt;s2;</span><br><span class="line">		s1.push_back(&#123;x1,y1&#125;);</span><br><span class="line">		s2.push_back(&#123;x2,y2&#125;);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> c: instructions)</span><br><span class="line">		&#123;</span><br><span class="line">			mp.clear();</span><br><span class="line">			<span class="keyword">int</span> r;</span><br><span class="line">			<span class="keyword">if</span>(c==<span class="string">'U'</span>)r=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">'D'</span>)r=<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">'L'</span>)r=<span class="number">3</span>;</span><br><span class="line">			<span class="keyword">else</span> r=<span class="number">2</span>;</span><br><span class="line">			temp.clear();</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">auto</span> t:s1)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> dx=t.x+fx[r];</span><br><span class="line">				<span class="keyword">int</span> dy=t.y+fy[r];</span><br><span class="line">				<span class="keyword">if</span>(mp1[dx].find(dy)==mp1[dx].end())</span><br><span class="line">				&#123;</span><br><span class="line">					mp1[dx].insert(dy);</span><br><span class="line">					temp.push_back(&#123;dx,dy&#125;);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span>(mp[t.x].find(t.y)==mp[t.x].end())</span><br><span class="line">					mp[t.x].insert(t.y);</span><br><span class="line">				<span class="keyword">if</span>(mp[dx].find(dy)==mp[dx].end())</span><br><span class="line">					mp[dx].insert(dy);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">auto</span> t:temp)</span><br><span class="line">				s1.push_back(t);</span><br><span class="line">			temp.clear();</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">auto</span> t:s2)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> dx=t.x+fx[r];</span><br><span class="line">				<span class="keyword">int</span> dy=t.y+fy[r];</span><br><span class="line">				<span class="keyword">if</span>(mp2[dx].find(dy)==mp2[dx].end())</span><br><span class="line">				&#123;</span><br><span class="line">					mp2[dx].insert(dy);</span><br><span class="line">					temp.push_back(&#123;dx,dy&#125;);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span>(mp[dx].find(dy)!=mp[dx].end() || mp[t.x].find(t.y)!=mp[t.x].end())<span class="keyword">return</span> <span class="string">"Explosion"</span>;</span><br><span class="line">			&#125;	</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">auto</span> t:temp)</span><br><span class="line">				s2.push_back(t);</span><br><span class="line">			temp.clear();		</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"Safe"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="C_u9898_3AXorLists"><a href="#C_u9898_3AXorLists" class="headerlink" title="C题:XorLists"></a>C题:XorLists</h2><hr>
-<h4 id="u9898_u76EE_u5927_u610F_uFF1A-1"><a href="#u9898_u76EE_u5927_u610F_uFF1A-1" class="headerlink" title="题目大意："></a>题目大意：</h4><p>有n个数他们互相Xor，得到$n^2$个数，把它们排列成一个矩阵，s[i*n+j]=a[i] xor a[j]，要求计算[1,m]的n个数的总情况数，得到的答案mod 1000000007.</p>
-<h4 id="u7B97_u6CD5_uFF1A"><a href="#u7B97_u6CD5_uFF1A" class="headerlink" title="算法："></a>算法：</h4><p>待定……</p>
-</span>
+        <span itemprop="articleBody"><p><a href="http://codeforces.com/contest/629" target="_blank" rel="external">Codeforces Round #343 (Div. 2)</a>部分题解。<br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/%E5%B0%8F%E5%9C%86null50b1fb4a819264f6.jpg" alt="xx"><br><a id="more"></a></p>
+<h1 id="A_u9898"><a href="#A_u9898" class="headerlink" title="A题"></a>A题</h1><hr>
+<h4 id="u9898_u76EE_u5927_u610F"><a href="#u9898_u76EE_u5927_u610F" class="headerlink" title="题目大意"></a>题目大意</h4><p>给你一个$n\times n$的矩阵，只包含’.’和’C’，问有多少对’C’在同一行或同一列。</p>
+<h4 id="u7B97_u6CD5"><a href="#u7B97_u6CD5" class="headerlink" title="算法"></a>算法</h4><p>模拟。统计每一行有多少个’C’，假设第$i$行有$s_i$个’C’，则这一行有$\frac{s_i\times (s_i-1)}{2}$对。列和行都统计一次。累加即可得到答案。复杂度$O(n^2)$。
+#### 代码
+<!--￼0-->
+
+# B题
+---
+#### 题目大意
+Door想要在一年的第$x(1\leq x \leq 366)$举办生日聚会，他有$n$个朋友。朋友们都住的很远，必须乘车来。而每辆车只能乘坐一男一女。现在给出这$n$个人可以来参加生日聚会的时间（以区间形式给出）和他们的性别，问生日聚会最多能有多少人参加。
+#### 算法
+贪心。首先枚举每一天，假设在这一天举办生日聚会。再遍历一遍每个人，统计能在这一天参加的男生人数和女生人数，而能参加生日聚会的人的总数则为$s=min(MaleNum,FemaleNum)\times 2$。最大的$s$即为答案。
+#### 代码
+<!--￼1-->
+
+# C题
+---
+#### 题目大意
+有一个字符串$S$，只有'('和')'，现在要找一对字符串$P和Q$（也是由'('和')'组成），使得$P+S+Q$满足以下两个条件：
+* '('的总数等于')'的总数
+* 任意一个前缀里'('的总数大于')'的总数
+
+问一共有多少对这样的$P和Q$（包括空串)，结果对$10^9+7$取模。
+#### 算法
+$\rm DP$。假设$f[i][j]$表示长度为$i$的字符串'('和')'的总数差为$j$的方案数（这里假定是前括号的数量$-$后括号的数量）。则可以得到如下状态转移方程：
+* $f[0][0]=1$（初始条件）
+* $f[i][0]=f[i][1]$
+* $f[i][j]=f[i-1][j+1]+f[i-1][j-1]$
+
+对于初始子串$S$，处理出以下两个数值
+* $minb$：前括号的数量-后括号的数量的最小值
+* $diff$:前括号的总数-后括号的总数
+
+最终可以推导出{% raw %}$ans=\displaystyle{\sum_{i=0}^{n-m} \sum_{j=max(0,j+minb)}^{j}f[i][j]\times f[n-m-i][j+diff]}$</p>
+<blockquote>
+<p>对于$f[i][j]$，前括号的数量$-$后括号的数量的方案数和后括号的数量$-$前括号的数量的方案数是相等的。</p>
+</blockquote>
+<h4 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rep(i,n) for(i=<span class="number">1</span>;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</span><br><span class="line"><span class="keyword">const</span> ll M=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line">ll f[<span class="number">2020</span>][<span class="number">2020</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"C.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"C.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">int</span> n,m;</span><br><span class="line">	<span class="built_in">string</span> s;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;s;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	f[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	rep(i,n-m)</span><br><span class="line">	&#123;</span><br><span class="line">		f[i][<span class="number">0</span>]=f[i-<span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">		rep(j,i)</span><br><span class="line">			f[i][j]=(f[i-<span class="number">1</span>][j+<span class="number">1</span>]+f[i-<span class="number">1</span>][j-<span class="number">1</span>])%M;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> diff=<span class="number">0</span>,minb=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(s[i]==<span class="string">'('</span>)diff++;</span><br><span class="line">		<span class="keyword">else</span> --diff;</span><br><span class="line">		minb=min(minb,diff);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//printf("diff=%d\n",diff);</span></span><br><span class="line">	ll ans=<span class="number">0</span>;</span><br><span class="line">	<span class="comment">//cout&lt;&lt;f[3][0]&lt;&lt;endl;</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=n-m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=i;j+minb&gt;=<span class="number">0</span> &amp;&amp; j&gt;=<span class="number">0</span>;--j)</span><br><span class="line">			<span class="keyword">if</span>(j+diff&lt;=<span class="number">2000</span>)</span><br><span class="line">				ans+=f[i][j]*f[n-m-i][j+diff]%M;</span><br><span class="line">		ans%=M;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="D_u9898"><a href="#D_u9898" class="headerlink" title="D题"></a>D题</h1><hr>
+<h4 id="u9898_u76EE_u5927_u610F-1"><a href="#u9898_u76EE_u5927_u610F-1" class="headerlink" title="题目大意"></a>题目大意</h4><p>有$n$个圆柱形的小蛋糕，现在要用这些小蛋糕做一个大蛋糕，只有标号和体积都大的蛋糕才能放在上面。问做出来的蛋糕的体积的最大值是多少。</p>
+<h4 id="u7B97_u6CD5-1"><a href="#u7B97_u6CD5-1" class="headerlink" title="算法"></a>算法</h4><p>$\rm DP$。假设$f[i]$表示体积为$i$的蛋糕在最上面的大蛋糕的体积的最大值。每次转移的时候，都二分体积找到第一块小于等于$v_i$的蛋糕$v_j$，从比$v_j$大的蛋糕开始向后枚举如果$f[v_k] ＜ f[v_j]+v_i$则将$f[v_k$删除。然后二分找到第一块体积小于等于$v_i$大的蛋糕$v_l$，如果$f[v_l]＜f[v_j]+v_i$。</p>
+<blockquote>
+<p>这里很绕，不懂的地方看代码。</p>
+</blockquote>
+<h4 id="u4EE3_u7801-1"><a href="#u4EE3_u7801-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rep(i,n) for(i=<span class="number">1</span>;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100100</span>;</span><br><span class="line">ll v[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"D.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"D.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">int</span> i,n;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="built_in">map</span>&lt;ll,ll&gt;f;</span><br><span class="line">	rep(i,n)</span><br><span class="line">	&#123;</span><br><span class="line">		ll h,r;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;r&gt;&gt;h;</span><br><span class="line">		v[i]=r*r*h;</span><br><span class="line">	&#125;</span><br><span class="line">	ll ans=<span class="number">0</span>;</span><br><span class="line">	f.insert(make_pair(<span class="number">0</span>,<span class="number">0</span>));</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">auto</span> it=f.lower_bound(v[i]);</span><br><span class="line">		--it;</span><br><span class="line">		ll tot=it-&gt;second+v[i];</span><br><span class="line">		it=f.lower_bound(v[i]);</span><br><span class="line">		<span class="keyword">while</span>(it!=f.end() &amp;&amp; it-&gt;second&lt;tot)</span><br><span class="line">				f.erase(it++);</span><br><span class="line">		it=f.upper_bound(v[i]);</span><br><span class="line">		--it;</span><br><span class="line">		<span class="keyword">if</span>(it-&gt;second&lt;tot)f.insert(make_pair(v[i],tot));</span><br><span class="line">		<span class="comment">//cout&lt;&lt;"tot="&lt;&lt;tot&lt;&lt;endl;</span></span><br><span class="line">		ans=max(ans,tot);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.12f\n"</span>,<span class="keyword">double</span>(ans)*<span class="built_in">acos</span>(-<span class="number">1.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -255,7 +289,7 @@
           
             <a href="/tags/ACM/" rel="tag">#ACM</a>
           
-            <a href="/tags/TC/" rel="tag">#TC</a>
+            <a href="/tags/CF/" rel="tag">#CF</a>
           
         </div>
       
@@ -264,13 +298,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/09/MarkDown入门简介/" rel="prev">Markdown入门教程</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/09/Codeforces Round 342 (Div. 2) /" rel="next">Codeforces Round 342 (Div2)</a>
+              <a href="/2016/02/20/Winter Training 15/" rel="next">Winter Training 15</a>
             
           </div>
         </div>
@@ -295,8 +327,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/02/09/TC SRM 681 div2/"
-                   data-title="TC SRM 681 div2" data-url="http://Akemi-Homura.github.io/2016/02/09/TC SRM 681 div2/">
+              <div class="ds-thread" data-thread-key="2016/02/24/Codeforces Round 343 (Div. 2) /"
+                   data-title="Codeforces Round 343 (Div. 2)" data-url="http://Akemi-Homura.github.io/2016/02/24/Codeforces Round 343 (Div. 2) /">
               </div>
             
           </div>
@@ -395,7 +427,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#A_u9898_3A_CoinFlipsDiv2"><span class="nav-number">1.</span> <span class="nav-text">A题: CoinFlipsDiv2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F_3A"><span class="nav-number">1.0.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801_uFF1A"><span class="nav-number">1.0.2.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#B_u9898_3AExplodingRobert"><span class="nav-number">2.</span> <span class="nav-text">B题:ExplodingRobert</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F_uFF1A"><span class="nav-number">2.0.1.</span> <span class="nav-text">题目大意：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5_3A"><span class="nav-number">2.0.2.</span> <span class="nav-text">算法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801_uFF1A-1"><span class="nav-number">2.0.3.</span> <span class="nav-text">代码：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C_u9898_3AXorLists"><span class="nav-number">3.</span> <span class="nav-text">C题:XorLists</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F_uFF1A-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">题目大意：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5_uFF1A"><span class="nav-number">3.0.2.</span> <span class="nav-text">算法：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A_u9898"><span class="nav-number">1.</span> <span class="nav-text">A题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#D_u9898"><span class="nav-number">2.</span> <span class="nav-text">D题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F-1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5-1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801-1"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
