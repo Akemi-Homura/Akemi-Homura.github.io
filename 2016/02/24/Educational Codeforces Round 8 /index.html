@@ -37,17 +37,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Codeforces Round #343 (Div. 2)部分题解。">
+<meta name="description" content="Educational Codeforces Round 8">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces Round 343 (Div. 2)">
-<meta property="og:url" content="http://Akemi-Homura.github.io/2016/02/24/Codeforces Round 343 (Div. 2) /index.html">
+<meta property="og:title" content="Educational Codeforces Round 8">
+<meta property="og:url" content="http://Akemi-Homura.github.io/2016/02/24/Educational Codeforces Round 8 /index.html">
 <meta property="og:site_name" content="James Joyce">
-<meta property="og:description" content="Codeforces Round #343 (Div. 2)部分题解。">
-<meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/%E5%B0%8F%E5%9C%86null50b1fb4a819264f6.jpg">
-<meta property="og:updated_time" content="2016-02-23T15:45:55.834Z">
+<meta property="og:description" content="Educational Codeforces Round 8">
+<meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/5e5d1b464395115aea97359ff4c4cac4e401ff7f.png">
+<meta property="og:updated_time" content="2016-02-24T15:32:12.446Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Codeforces Round 343 (Div. 2)">
-<meta name="twitter:description" content="Codeforces Round #343 (Div. 2)部分题解。">
+<meta name="twitter:title" content="Educational Codeforces Round 8">
+<meta name="twitter:description" content="Educational Codeforces Round 8">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -57,7 +57,7 @@
   };
 </script>
 
-  <title> Codeforces Round 343 (Div. 2) | James Joyce </title>
+  <title> Educational Codeforces Round 8 | James Joyce </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,7 +172,7 @@
           
           
             
-              Codeforces Round 343 (Div. 2)
+              Educational Codeforces Round 8
             
           
         </h1>
@@ -181,7 +181,7 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-02-24T12:48:54+08:00" content="2016-02-24">
+          <time itemprop="dateCreated" datetime="2016-02-24T23:32:12+08:00" content="2016-02-24">
             2016-02-24
           </time>
         </span>
@@ -219,8 +219,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/02/24/Codeforces Round 343 (Div. 2) /#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/Codeforces Round 343 (Div. 2) /" itemprop="commentsCount"></span>
+              <a href="/2016/02/24/Educational Codeforces Round 8 /#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/Educational Codeforces Round 8 /" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -234,52 +234,21 @@
       
 
       
-        <span itemprop="articleBody"><p><a href="http://codeforces.com/contest/629" target="_blank" rel="external">Codeforces Round #343 (Div. 2)</a>部分题解。<br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/%E5%B0%8F%E5%9C%86null50b1fb4a819264f6.jpg" alt="xx"><br><a id="more"></a></p>
+        <span itemprop="articleBody"><p><a href="http://codeforces.com/contest/628" target="_blank" rel="external">Educational Codeforces Round 8</a><br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/5e5d1b464395115aea97359ff4c4cac4e401ff7f.png" alt="y"><br><a id="more"></a></p>
 <h1 id="A_u9898"><a href="#A_u9898" class="headerlink" title="A题"></a>A题</h1><hr>
-<h4 id="u9898_u76EE_u5927_u610F"><a href="#u9898_u76EE_u5927_u610F" class="headerlink" title="题目大意"></a>题目大意</h4><p>给你一个$n\times n$的矩阵，只包含’.’和’C’，问有多少对’C’在同一行或同一列。</p>
-<h4 id="u7B97_u6CD5"><a href="#u7B97_u6CD5" class="headerlink" title="算法"></a>算法</h4><p>模拟。统计每一行有多少个’C’，假设第$i$行有$s_i$个’C’，则这一行有$\frac{s_i\times (s_i-1)}{2}$对。列和行都统计一次。累加即可得到答案。复杂度$O(n^2)$。
-#### 代码
-<!--￼0-->
-
-# B题
----
-#### 题目大意
-Door想要在一年的第$x(1\leq x \leq 366)$举办生日聚会，他有$n$个朋友。朋友们都住的很远，必须乘车来。而每辆车只能乘坐一男一女。现在给出这$n$个人可以来参加生日聚会的时间（以区间形式给出）和他们的性别，问生日聚会最多能有多少人参加。
-#### 算法
-贪心。首先枚举每一天，假设在这一天举办生日聚会。再遍历一遍每个人，统计能在这一天参加的男生人数和女生人数，而能参加生日聚会的人的总数则为$s=min(MaleNum,FemaleNum)\times 2$。最大的$s$即为答案。
-#### 代码
-<!--￼1-->
-
-# C题
----
-#### 题目大意
-有一个字符串$S$，只有'('和')'，现在要找一对字符串$P和Q$（也是由'('和')'组成），使得$P+S+Q$满足以下两个条件：
-* '('的总数等于')'的总数
-* 任意一个前缀里'('的总数大于')'的总数
-
-问一共有多少对这样的$P和Q$（包括空串)，结果对$10^9+7$取模。
-#### 算法
-$\rm DP$。假设$f[i][j]$表示长度为$i$的字符串'('和')'的总数差为$j$的方案数（这里假定是前括号的数量$-$后括号的数量）。则可以得到如下状态转移方程：
-* $f[0][0]=1$（初始条件）
-* $f[i][0]=f[i][1]$
-* $f[i][j]=f[i-1][j+1]+f[i-1][j-1]$
-
-对于初始子串$S$，处理出以下两个数值
-* $minb$：前括号的数量-后括号的数量的最小值
-* $diff$:前括号的总数-后括号的总数
-
-最终可以推导出{% raw %}$ans=\displaystyle{\sum_{i=0}^{n-m} \sum_{j=max(0,j+minb)}^{j}f[i][j]\times f[n-m-i][j+diff]}$</p>
-<blockquote>
-<p>对于$f[i][j]$，前括号的数量$-$后括号的数量的方案数和后括号的数量$-$前括号的数量的方案数是相等的。</p>
-</blockquote>
-<h4 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rep(i,n) for(i=<span class="number">1</span>;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</span><br><span class="line"><span class="keyword">const</span> ll M=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line">ll f[<span class="number">2020</span>][<span class="number">2020</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"C.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"C.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">int</span> n,m;</span><br><span class="line">	<span class="built_in">string</span> s;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m&gt;&gt;s;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	f[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	rep(i,n-m)</span><br><span class="line">	&#123;</span><br><span class="line">		f[i][<span class="number">0</span>]=f[i-<span class="number">1</span>][<span class="number">1</span>];</span><br><span class="line">		rep(j,i)</span><br><span class="line">			f[i][j]=(f[i-<span class="number">1</span>][j+<span class="number">1</span>]+f[i-<span class="number">1</span>][j-<span class="number">1</span>])%M;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> diff=<span class="number">0</span>,minb=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(s[i]==<span class="string">'('</span>)diff++;</span><br><span class="line">		<span class="keyword">else</span> --diff;</span><br><span class="line">		minb=min(minb,diff);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//printf("diff=%d\n",diff);</span></span><br><span class="line">	ll ans=<span class="number">0</span>;</span><br><span class="line">	<span class="comment">//cout&lt;&lt;f[3][0]&lt;&lt;endl;</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=n-m;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=i;j+minb&gt;=<span class="number">0</span> &amp;&amp; j&gt;=<span class="number">0</span>;--j)</span><br><span class="line">			<span class="keyword">if</span>(j+diff&lt;=<span class="number">2000</span>)</span><br><span class="line">				ans+=f[i][j]*f[n-m-i][j+diff]%M;</span><br><span class="line">		ans%=M;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="u9898_u76EE_u5927_u610F"><a href="#u9898_u76EE_u5927_u610F" class="headerlink" title="题目大意"></a>题目大意</h4><p>有$n$个参赛者进行网球比赛淘汰赛，假设当前还剩下$m$个人，则有$k$（$k$是$2$的指数幂并且$k\leq n$)个人打个人赛，其余选手直接进入下一轮。每场比赛每个选手需要$b$瓶水，裁判需要$1$瓶水，问最后只剩下一个人的时候，总共需要多少瓶水。</p>
+<h4 id="u7B97_u6CD5"><a href="#u7B97_u6CD5" class="headerlink" title="算法"></a>算法</h4><p>模拟。每次都找出$k$，累加上$\frac{k}{2} \times (2\times b+1)$。</p>
+<h4 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	ll n,b,p,ans=<span class="number">0L</span>L,sum;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;b&gt;&gt;p;</span><br><span class="line">	sum=n*p;</span><br><span class="line">	<span class="keyword">while</span>(n&gt;<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		ll k=<span class="number">512L</span>L,u=<span class="number">9L</span>L;</span><br><span class="line">		<span class="keyword">while</span>(k&gt;n)</span><br><span class="line">		&#123;</span><br><span class="line">			k/=<span class="number">2L</span>L;</span><br><span class="line">			--u;</span><br><span class="line">		&#125;</span><br><span class="line">		n-=k/<span class="number">2L</span>L;</span><br><span class="line">		ans+=(k/<span class="number">2L</span>L)*(<span class="number">2L</span>L*b+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="string">' '</span>&lt;&lt;sum&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="B_u9898"><a href="#B_u9898" class="headerlink" title="B题"></a>B题</h1><hr>
+<h4 id="u9898_u76EE_u5927_u610F-1"><a href="#u9898_u76EE_u5927_u610F-1" class="headerlink" title="题目大意"></a>题目大意</h4><p>给你一个整数（可能有前导零，位数最多有$3\times 10^5$)。问里面有几个子串是$4$的倍数。</p>
+<h4 id="u7B97_u6CD5-1"><a href="#u7B97_u6CD5-1" class="headerlink" title="算法"></a>算法</h4><p>有这样一个数学定理：<font color="red"><strong>如果一个数最后两位能整除$4$，则这个数能被$4$整除。</strong></font>假设$\overline{s_{i}s_{i+1}}$能被$4$整除，则答案累加$i+1$(下标从$0$开始)。</p>
+<h4 id="u4EE3_u7801-1"><a href="#u4EE3_u7801-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</span><br><span class="line"><span class="keyword">char</span> s[<span class="number">300100</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"B.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"B.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">int</span> len,i;</span><br><span class="line">	ll ans=<span class="number">0L</span>L;</span><br><span class="line">	gets(s);</span><br><span class="line">	len=<span class="built_in">strlen</span>(s);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">		<span class="keyword">if</span>((s[i]-<span class="string">'0'</span>)%<span class="number">4</span>==<span class="number">0</span>)</span><br><span class="line">			++ans;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len-<span class="number">1</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> x=(s[i]-<span class="string">'0'</span>)*<span class="number">10</span>+s[i+<span class="number">1</span>]-<span class="string">'0'</span>;</span><br><span class="line">		<span class="keyword">if</span>(x%<span class="number">4</span>==<span class="number">0</span>)</span><br><span class="line">			ans+=ll(i+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="C_u9898"><a href="#C_u9898" class="headerlink" title="C题"></a>C题</h1><hr>
+<h4 id="u9898_u76EE_u5927_u610F-2"><a href="#u9898_u76EE_u5927_u610F-2" class="headerlink" title="题目大意"></a>题目大意</h4><p>定义$dist(a,e)=dist(e,a)=4$，以此类推。定义两个字符串$P,Q$（长度相同）距离为$\displaystyle{\sum_{i=1}^{len}}dist(P_i,Q_i)$。现在给出一个初始字符串$S$，要求构造一个字符串$P$，使得$S,P$的距离为$k$。</p>
+<h4 id="u7B97_u6CD5-2"><a href="#u7B97_u6CD5-2" class="headerlink" title="算法"></a>算法</h4><p>贪心。刚开始先填与$S_i$距离最远的字母，直到把$k$消耗完，然后就开始填与$S_i$相同的字母。</p>
+<h4 id="u4EE3_u7801-2"><a href="#u4EE3_u7801-2" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">char</span> s[<span class="number">100100</span>],ans[<span class="number">100100</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,k,i;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d\n"</span>,&amp;n,&amp;k);</span><br><span class="line">	gets(s);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(!k)</span><br><span class="line">		&#123;</span><br><span class="line">			ans[i]=s[i];</span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> t=max(<span class="string">'z'</span>-s[i],s[i]-<span class="string">'a'</span>);</span><br><span class="line">		<span class="keyword">if</span>(t&lt;k)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="string">'z'</span>-s[i]==t) ans[i]=<span class="string">'z'</span>;</span><br><span class="line">			<span class="keyword">else</span> ans[i]=<span class="string">'a'</span>;</span><br><span class="line">			k-=t;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(s[i]-k&gt;=<span class="string">'a'</span>)ans[i]=s[i]-k;</span><br><span class="line">			<span class="keyword">else</span> ans[i]=s[i]+k;</span><br><span class="line">			k=<span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(k)<span class="built_in">puts</span>(<span class="string">"-1"</span>);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">puts</span>(ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="D_u9898"><a href="#D_u9898" class="headerlink" title="D题"></a>D题</h1><hr>
-<h4 id="u9898_u76EE_u5927_u610F-1"><a href="#u9898_u76EE_u5927_u610F-1" class="headerlink" title="题目大意"></a>题目大意</h4><p>有$n$个圆柱形的小蛋糕，现在要用这些小蛋糕做一个大蛋糕，只有标号和体积都大的蛋糕才能放在上面。问做出来的蛋糕的体积的最大值是多少。</p>
-<h4 id="u7B97_u6CD5-1"><a href="#u7B97_u6CD5-1" class="headerlink" title="算法"></a>算法</h4><p>$\rm DP$。假设$f[i]$表示体积为$i$的蛋糕在最上面的大蛋糕的体积的最大值。每次转移的时候，都二分体积找到第一块小于等于$v_i$的蛋糕$v_j$，从比$v_j$大的蛋糕开始向后枚举如果$f[v_k] ＜ f[v_j]+v_i$则将$f[v_k$删除。然后二分找到第一块体积小于等于$v_i$大的蛋糕$v_l$，如果$f[v_l]＜f[v_j]+v_i$。</p>
-<blockquote>
-<p>这里很绕，不懂的地方看代码。</p>
-</blockquote>
-<h4 id="u4EE3_u7801-1"><a href="#u4EE3_u7801-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> rep(i,n) for(i=<span class="number">1</span>;i&lt;=n;i++)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">100100</span>;</span><br><span class="line">ll v[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"D.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"D.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">int</span> i,n;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">	<span class="built_in">map</span>&lt;ll,ll&gt;f;</span><br><span class="line">	rep(i,n)</span><br><span class="line">	&#123;</span><br><span class="line">		ll h,r;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;r&gt;&gt;h;</span><br><span class="line">		v[i]=r*r*h;</span><br><span class="line">	&#125;</span><br><span class="line">	ll ans=<span class="number">0</span>;</span><br><span class="line">	f.insert(make_pair(<span class="number">0</span>,<span class="number">0</span>));</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">auto</span> it=f.lower_bound(v[i]);</span><br><span class="line">		--it;</span><br><span class="line">		ll tot=it-&gt;second+v[i];</span><br><span class="line">		it=f.lower_bound(v[i]);</span><br><span class="line">		<span class="keyword">while</span>(it!=f.end() &amp;&amp; it-&gt;second&lt;tot)</span><br><span class="line">				f.erase(it++);</span><br><span class="line">		it=f.upper_bound(v[i]);</span><br><span class="line">		--it;</span><br><span class="line">		<span class="keyword">if</span>(it-&gt;second&lt;tot)f.insert(make_pair(v[i],tot));</span><br><span class="line">		<span class="comment">//cout&lt;&lt;"tot="&lt;&lt;tot&lt;&lt;endl;</span></span><br><span class="line">		ans=max(ans,tot);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.12f\n"</span>,<span class="keyword">double</span>(ans)*<span class="built_in">acos</span>(-<span class="number">1.0</span>));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
+<h4 id="u9898_u76EE_u5927_u610F-3"><a href="#u9898_u76EE_u5927_u610F-3" class="headerlink" title="题目大意"></a>题目大意</h4></span>
       
     </div>
 
@@ -298,13 +267,11 @@ $\rm DP$。假设$f[i][j]$表示长度为$i$的字符串'('和')'的总数差为
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/02/24/Educational Codeforces Round 8 /" rel="prev">Educational Codeforces Round 8</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/20/Winter Training 15/" rel="next">Winter Training 15</a>
+              <a href="/2016/02/24/Codeforces Round 343 (Div. 2) /" rel="next">Codeforces Round 343 (Div. 2)</a>
             
           </div>
         </div>
@@ -329,8 +296,8 @@ $\rm DP$。假设$f[i][j]$表示长度为$i$的字符串'('和')'的总数差为
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/02/24/Codeforces Round 343 (Div. 2) /"
-                   data-title="Codeforces Round 343 (Div. 2)" data-url="http://Akemi-Homura.github.io/2016/02/24/Codeforces Round 343 (Div. 2) /">
+              <div class="ds-thread" data-thread-key="2016/02/24/Educational Codeforces Round 8 /"
+                   data-title="Educational Codeforces Round 8" data-url="http://Akemi-Homura.github.io/2016/02/24/Educational Codeforces Round 8 /">
               </div>
             
           </div>
@@ -429,7 +396,7 @@ $\rm DP$。假设$f[i][j]$表示长度为$i$的字符串'('和')'的总数差为
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A_u9898"><span class="nav-number">1.</span> <span class="nav-text">A题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#D_u9898"><span class="nav-number">2.</span> <span class="nav-text">D题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F-1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5-1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801-1"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A_u9898"><span class="nav-number">1.</span> <span class="nav-text">A题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B_u9898"><span class="nav-number">2.</span> <span class="nav-text">B题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F-1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5-1"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801-1"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C_u9898"><span class="nav-number">3.</span> <span class="nav-text">C题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F-2"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B97_u6CD5-2"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4EE3_u7801-2"><span class="nav-number">3.0.0.3.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#D_u9898"><span class="nav-number">4.</span> <span class="nav-text">D题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u9898_u76EE_u5927_u610F-3"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">题目大意</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
