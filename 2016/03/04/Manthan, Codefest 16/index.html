@@ -40,11 +40,11 @@
 <meta name="description" content="Manthan, Codefest 16部分题解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Manthan, Codefest 16">
-<meta property="og:url" content="http://Akemi-Homura.github.io/2016/03/03/Manthan, Codefest 16/index.html">
+<meta property="og:url" content="http://Akemi-Homura.github.io/2016/03/04/Manthan, Codefest 16/index.html">
 <meta property="og:site_name" content="James Joyce">
 <meta property="og:description" content="Manthan, Codefest 16部分题解">
 <meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/%E5%B7%B2%E7%94%A83.jpg">
-<meta property="og:updated_time" content="2016-03-03T09:14:30.081Z">
+<meta property="og:updated_time" content="2016-03-03T18:31:12.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Manthan, Codefest 16">
 <meta name="twitter:description" content="Manthan, Codefest 16部分题解">
@@ -181,8 +181,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-03-03T17:14:30+08:00" content="2016-03-03">
-            2016-03-03
+          <time itemprop="dateCreated" datetime="2016-03-04T02:31:12+08:00" content="2016-03-04">
+            2016-03-04
           </time>
         </span>
 
@@ -219,8 +219,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/03/03/Manthan, Codefest 16/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/Manthan, Codefest 16/" itemprop="commentsCount"></span>
+              <a href="/2016/03/04/Manthan, Codefest 16/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/Manthan, Codefest 16/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -248,7 +248,7 @@
 <h4 id="u4EE3_u7801-1"><a href="#u4EE3_u7801-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;ans;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> v)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(v)</span><br><span class="line">	&#123;</span><br><span class="line">		t+=v/<span class="number">5</span>;</span><br><span class="line">		v/=<span class="number">5</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,tot=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;m;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;;++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(check(i)==m)</span><br><span class="line">		&#123;</span><br><span class="line">			++tot;</span><br><span class="line">			ans.push_back(i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(check(i)&gt;m)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,tot);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> c:ans)</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;c&lt;&lt;<span class="string">' '</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="D_u9898"><a href="#D_u9898" class="headerlink" title="D题"></a>D题</h1><hr>
 <h4 id="u9898_u76EE_u5927_u610F-1"><a href="#u9898_u76EE_u5927_u610F-1" class="headerlink" title="题目大意"></a>题目大意</h4><p>有$n$个数，要求重新调整这$n$个数的顺序，使得前缀满足$f_{n+2}=f_{n+1}+f_{n}$的序列最长。</p>
-<h4 id="u7B97_u6CD5-2"><a href="#u7B97_u6CD5-2" class="headerlink" title="算法"></a>算法</h4><p>先来简单的分析一下。如果我们知道了这个序列的前两项那么整个序列就确定了，因此可以枚举前两项，然后看这个序列最多能有多长，唯一的优化是记录哪些前两项被枚举过，防止被0 0 0 0…这样的数据$\rm Hack$，其他的优化就不必做了，反而会<font color="red"><strong>弄巧成拙。</strong></font></p>
+<h4 id="u7B97_u6CD5-2"><a href="#u7B97_u6CD5-2" class="headerlink" title="算法"></a>算法</h4><p>先来简单的分析一下。如果我们知道了这个序列的前两项那么整个序列就确定了，因此可以枚举前两项，然后看这个序列最多能有多长，唯一的优化是记录哪些前两项被枚举过，防止被0 0 0 0…这样的数据$\rm Hack$，其他的优化就不必做了，乱优化反而会<font color="red"><strong>弄巧成拙。</strong></font></p>
 <blockquote>
 <p>可以暴力的原因是最多只有几个序列的长度接近$n$，其他的序列都很短，所以总的复杂度远小于$n^3$，加上$\rm cf$神机，完全可以跑过。</p>
 </blockquote>
@@ -271,13 +271,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/03/TopCoder SRM 683 Div 2/" rel="prev">TopCoder SRM 683 Div 2</a>
+              <a href="/2016/03/04/Educational Codeforces Round 9/" rel="prev">Educational Codeforces Round 9</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/02/Educational Codeforces Round 9/" rel="next">Educational Codeforces Round 9</a>
+              <a href="/2016/03/03/TopCoder SRM 683 Div 2/" rel="next">TopCoder SRM 683 Div 2</a>
             
           </div>
         </div>
@@ -302,8 +302,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/03/03/Manthan, Codefest 16/"
-                   data-title="Manthan, Codefest 16" data-url="http://Akemi-Homura.github.io/2016/03/03/Manthan, Codefest 16/">
+              <div class="ds-thread" data-thread-key="2016/03/04/Manthan, Codefest 16/"
+                   data-title="Manthan, Codefest 16" data-url="http://Akemi-Homura.github.io/2016/03/04/Manthan, Codefest 16/">
               </div>
             
           </div>

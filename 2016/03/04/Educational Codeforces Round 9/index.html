@@ -40,11 +40,11 @@
 <meta name="description" content="Educational Codeforces Round 9部分题解.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Educational Codeforces Round 9">
-<meta property="og:url" content="http://Akemi-Homura.github.io/2016/03/02/Educational Codeforces Round 9/index.html">
+<meta property="og:url" content="http://Akemi-Homura.github.io/2016/03/04/Educational Codeforces Round 9/index.html">
 <meta property="og:site_name" content="James Joyce">
 <meta property="og:description" content="Educational Codeforces Round 9部分题解.">
 <meta property="og:image" content="http://7xqsr4.com1.z0.glb.clouddn.com/%E5%B7%B2%E7%94%A82.jpg">
-<meta property="og:updated_time" content="2016-03-02T15:26:29.218Z">
+<meta property="og:updated_time" content="2016-03-03T18:32:58.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Educational Codeforces Round 9">
 <meta name="twitter:description" content="Educational Codeforces Round 9部分题解.">
@@ -181,8 +181,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-03-02T23:26:29+08:00" content="2016-03-02">
-            2016-03-02
+          <time itemprop="dateCreated" datetime="2016-03-04T02:32:58+08:00" content="2016-03-04">
+            2016-03-04
           </time>
         </span>
 
@@ -219,8 +219,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/03/02/Educational Codeforces Round 9/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/02/Educational Codeforces Round 9/" itemprop="commentsCount"></span>
+              <a href="/2016/03/04/Educational Codeforces Round 9/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/04/Educational Codeforces Round 9/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -237,7 +237,7 @@
         <span itemprop="articleBody"><p><a href="http://codeforces.com/contest/632/my" target="_blank" rel="external">Educational Codeforces Round 9</a>部分题解.<br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/%E5%B7%B2%E7%94%A82.jpg" alt="s"><br><a id="more"></a></p>
 <h1 id="A_u9898"><a href="#A_u9898" class="headerlink" title="A题"></a>A题</h1><hr>
 <h4 id="u9898_u76EE_u5927_u610F"><a href="#u9898_u76EE_u5927_u610F" class="headerlink" title="题目大意"></a>题目大意</h4><p>有$n$个人来买苹果，每个苹果$p$元，每个人都买当前苹果数的一半，如果当前的苹果数是奇数，则免费送他半个苹果。现在给出$n$个人是否被赠送了半个苹果，”half” 表示没有被赠送半个苹果，”halfplus”表示被赠送了半个苹果。已知初始的时候至少有一个苹果，并且苹果卖完了，问苹果一共卖了多少钱。</p>
-<h4 id="u7B97_u6CD5"><a href="#u7B97_u6CD5" class="headerlink" title="算法"></a>算法</h4><p>经过简单的分析，最后一个肯定是”halfplus”。从后向前递推（这个道理很简单），假设第$i$个人买的时候还剩下$p$个苹果，如果$i-1$个人是”half”则，第$i-1$个人买的时候还剩下$2p$个苹果，如果第$i1$个人是”halfplus”,则第$i-1$个人买的时候还剩下$2p+1$个苹果。</p>
+<h4 id="u7B97_u6CD5"><a href="#u7B97_u6CD5" class="headerlink" title="算法"></a>算法</h4><p>经过简单的分析，最后一个肯定是”halfplus”。从后向前递推（这个道理很简单），假设第$i$个人买的时候还剩下$p$个苹果，如果$i-1$个人是”half”则，第$i-1$个人买的时候还剩下$2p$个苹果，如果第$i-1$个人是”halfplus”,则第$i-1$个人买的时候还剩下$2p+1$个苹果。</p>
 <h4 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</span><br><span class="line"><span class="keyword">int</span> t[<span class="number">50</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	freopen(<span class="string">"A.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);</span><br><span class="line">	freopen(<span class="string">"A.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</span><br><span class="line">	<span class="keyword">int</span> i,n;ll p,ans=<span class="number">0L</span>L,x=<span class="number">1L</span>L;</span><br><span class="line">	<span class="built_in">string</span> temp;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;p;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;temp;</span><br><span class="line">		<span class="keyword">if</span>(temp==<span class="string">"half"</span>)</span><br><span class="line">			t[i]=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	ans=p/<span class="number">2L</span>L;</span><br><span class="line">	<span class="keyword">for</span>(i=n-<span class="number">1</span>;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">		<span class="keyword">if</span>(t[i])</span><br><span class="line">		&#123;</span><br><span class="line">			ans+=x*p;</span><br><span class="line">			x*=<span class="number">2L</span>L;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			x=x*<span class="number">2L</span>L+<span class="number">1L</span>L;</span><br><span class="line">			ans+=p/<span class="number">2L</span>L*x;</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="B_u9898"><a href="#B_u9898" class="headerlink" title="B题"></a>B题</h1><hr>
 <h4 id="u9898_u76EE_u5927_u610F-1"><a href="#u9898_u76EE_u5927_u610F-1" class="headerlink" title="题目大意"></a>题目大意</h4><p>有$n$个数字，初始的时候分别属于$A和B$，现在$Bob$可以选择任意一个前缀或后缀，翻转字母，问$B$能获得的数字的总和减去A能获得的数字的总和的最大值。</p>
@@ -269,13 +269,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/03/Manthan, Codefest 16/" rel="prev">Manthan, Codefest 16</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/24/Educational Codeforces Round 8 /" rel="next">Educational Codeforces Round 8</a>
+              <a href="/2016/03/04/Manthan, Codefest 16/" rel="next">Manthan, Codefest 16</a>
             
           </div>
         </div>
@@ -300,8 +298,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/03/02/Educational Codeforces Round 9/"
-                   data-title="Educational Codeforces Round 9" data-url="http://Akemi-Homura.github.io/2016/03/02/Educational Codeforces Round 9/">
+              <div class="ds-thread" data-thread-key="2016/03/04/Educational Codeforces Round 9/"
+                   data-title="Educational Codeforces Round 9" data-url="http://Akemi-Homura.github.io/2016/03/04/Educational Codeforces Round 9/">
               </div>
             
           </div>
