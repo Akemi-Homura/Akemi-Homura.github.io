@@ -172,7 +172,7 @@
           
           
             
-              <a class="post-title-link" href="/2016/03/10/Topcoder SRM 684 Div2/" itemprop="url">
+              <a class="post-title-link" href="/2016/03/14/Topcoder SRM 684 Div2/" itemprop="url">
                 Topcoder SRM 684 Div2
               </a>
             
@@ -183,8 +183,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-03-10T23:29:30+08:00" content="2016-03-10">
-            2016-03-10
+          <time itemprop="dateCreated" datetime="2016-03-14T12:49:36+08:00" content="2016-03-14">
+            2016-03-14
           </time>
         </span>
 
@@ -221,8 +221,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/03/10/Topcoder SRM 684 Div2/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/10/Topcoder SRM 684 Div2/" itemprop="commentsCount"></span>
+              <a href="/2016/03/14/Topcoder SRM 684 Div2/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/14/Topcoder SRM 684 Div2/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -237,21 +237,12 @@
 
       
         
-          <span itemprop="articleBody"><p>Topcoder SRM 684 Div2部分题解<br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/%E5%B7%B2%E7%94%A85.jpg" alt="tu"></p>
-<h1 id="A_u9898"><a href="#A_u9898" class="headerlink" title="A题"></a>A题</h1><hr>
-<h4 id="u9898_u76EE_u5927_u610F"><a href="#u9898_u76EE_u5927_u610F" class="headerlink" title="题目大意"></a>题目大意</h4><p>给你一个字符串（全是小写字母）和整数$k$，假设$s[i]$表示第$i$个小写字母出现的次数，要求移除$k$个字符，使得$\displaystyle{\sum_{i=1}^{26}s[i]^2}$最小。</p>
-<h4 id="u7B97_u6CD5"><a href="#u7B97_u6CD5" class="headerlink" title="算法"></a>算法</h4><p><strong>贪心</strong>。每次都移除$s[i]$值最大的那个字母。</p>
-<h4 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#include &#60;bits/stdc++.h&#62;&#10;using namespace std;&#10;class Istr&#10;&#123;&#10;&#9;public:&#10;&#9;int count(string s, int k)&#10;&#9;&#123;&#10;&#9;&#9;int len=s.size(),num[30];&#10;&#9;&#9;memset(num,0,sizeof(num));&#10;&#9;&#9;for(int i=0;i&#60;len;i++)&#10;&#9;&#9;&#9;++num[s[i]-&#39;a&#39;];&#10;&#9;&#9;for(int i=0;i&#60;k;i++)&#10;&#9;&#9;&#123;&#10;&#9;&#9;&#9;int MAX=0,NUM=-1;&#10;&#9;&#9;&#9;for(int j=0;j&#60;26;j++)&#10;&#9;&#9;&#9;&#123;&#10;&#9;&#9;&#9;&#9;if(num[j]&#62;MAX)&#10;&#9;&#9;&#9;&#9;&#123;&#10;&#9;&#9;&#9;&#9;&#9;MAX=num[j];&#10;&#9;&#9;&#9;&#9;&#9;NUM=j;&#10;&#9;&#9;&#9;&#9;&#125;&#10;&#9;&#9;&#9;&#125;&#10;&#9;&#9;&#9;--num[NUM];&#10;&#9;&#9;&#125;&#10;&#9;&#9;int ans=0;&#10;&#9;&#9;for(int j=0;j&#60;26;j++)&#10;&#9;&#9;&#123;&#10;&#9;&#9;&#9;ans+=num[j]*num[j];&#10;&#9;&#9;&#125;&#10;&#9;&#9;return ans;&#10;&#9;&#125;&#10;&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="B_u9898"><a href="#B_u9898" class="headerlink" title="B题"></a>B题</h1><hr>
-<h4 id="u9898_u76EE_u5927_u610F-1"><a href="#u9898_u76EE_u5927_u610F-1" class="headerlink" title="题目大意"></a>题目大意</h4><p>要求构造一个长度为$n$数列，要求每个数是区间$[1,k]$上的整数，并且对于任意两个相邻的数$A和B$（$A在B$前面），要求满足$A\leq B或A　mod　B\neq0$，求方案数，将答案对$10^9+7$取模。</p>
-<h4 id="u7B97_u6CD5-1"><a href="#u7B97_u6CD5-1" class="headerlink" title="算法"></a>算法</h4><p><font color="pink"> 动态规划 </font>。假设$f[i][j]$表示数列的长度为$i$，数列最后一个数为$j$的方案数。可以很容易得出下面的转移方程：</p>
-<ol>
-<li>$f[1][i]=1$（初始化）</li>
-<li>$f[i][j]=\displaystyle{\sum_{j\nmid k或k\leq j}f[i-1][k]}$
-</li>
-</ol>
-<p>为了快速的转移，首先预处理出$a[i]$表示$i$的倍数有哪些（用vector存），每次转移的时候先计算$sum=\displaystyle{\sum_{j=1}^kf[i-1][j]}，则f[i][j]=sum-\displaystyle{\sum_{j|k}f[i-1][k]}$.</p>
-<h4 id="u4EE3_u7801-1"><a href="#u4EE3_u7801-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#include &#60;bits/stdc++.h&#62;&#10;using namespace std;&#10;typedef long long int ll;&#10;const ll M=1e9+7;&#10;ll f[11][100010];&#10;class DivFreed2&#10;&#123;&#10;&#9;public:&#10;&#9;int count(int n, int k)&#10;&#9;&#123;&#10;&#9;&#9;vector&#60;int&#62;a[100010];&#10;&#9;&#9;for(int i=1;i&#60;=k;i++)&#10;&#9;&#9;&#123;&#10;&#9;&#9;&#9;for(int j=2*i;j&#60;=k;j+=i)&#10;&#9;&#9;&#9;&#123;&#10;&#9;&#9;&#9;&#9;a[i].push_back(j);&#10;&#9;&#9;&#9;&#125;&#10;&#9;&#9;&#125;&#10;&#9;&#9;for(int i=1;i&#60;=k;i++)&#10;&#9;&#9;&#123;&#10;&#9;&#9;&#9;f[1][i]=1;&#10;&#9;&#9;&#125;&#10;&#9;&#9;for(int i=2;i&#60;=n;i++)&#10;&#9;&#9;&#123;&#10;&#9;&#9;&#9;ll sum=0;&#10;&#9;&#9;&#9;for(int j=1;j&#60;=k;j++)sum=(sum+f[i-1][j])%M;&#10;&#9;&#9;&#9;for(int j=1;j&#60;=k;j++)&#10;&#9;&#9;&#9;&#123;&#10;&#9;&#9;&#9;&#9;f[i][j]=sum;&#10;&#9;&#9;&#9;&#9;for(auto c: a[j])&#10;&#9;&#9;&#9;&#9;&#123;&#10;&#9;&#9;&#9;&#9;&#9;f[i][j]=(f[i][j]-f[i-1][c]+M)%M;&#10;&#9;&#9;&#9;&#9;&#125;&#10;&#9;&#9;&#9;&#125;&#10;&#9;&#9;&#125;&#10;&#9;&#9;ll ans=0;&#10;&#9;&#9;for(int i=1;i&#60;=k;i++)&#10;&#9;&#9;&#123;&#10;&#9;&#9;&#9;ans=(ans+f[n][i])%M;&#10;&#9;&#9;&#125;&#10;&#9;&#9;//cout&#60;&#60;f[n][1]&#60;&#60;&#39; &#39;&#60;&#60;f[n][2]&#60;&#60;endl;&#10;&#9;&#9;return ans;&#10;&#9;&#125;&#10;&#125;;</span><br></pre></td></tr></table></figure></span>
+          <p>Topcoder SRM 684 Div2部分题解<br><img src="http://7xqsr4.com1.z0.glb.clouddn.com/%E5%B7%B2%E7%94%A85.jpg" alt="tu"><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/14/Topcoder SRM 684 Div2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
